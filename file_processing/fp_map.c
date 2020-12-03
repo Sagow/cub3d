@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 01:50:56 by marina            #+#    #+#             */
-/*   Updated: 2020/12/03 19:44:35 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 20:16:07 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*copy_comp(t_fp_map *link, int size, t_cub3d *cub3d, t_fp_map **begins)
 	i = 0;
 	while (i < size && link->line[i])
 	{
-		if (!belongs(link->line[i], " 012384NSEW"))
+		if (!belongs(link->line[i], " 012NSEW"))
 		{
 			free(map);
 			ft_errorfp(DESC_WRONG_CHAR, "mapping2", cub3d, begins);

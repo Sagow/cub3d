@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/05 17:52:50 by marina            #+#    #+#             */
-/*   Updated: 2020/12/03 17:36:09 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 20:20:27 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,7 +171,7 @@ void				get_path(char *path, int *i, char *line, int max);
 void				fp_map(t_cub3d *cub3d, int fd, char *line);
 
 void				ft_error(char *message, char *place, t_cub3d *cub3d);
-void				ft_errorfp(char *message, char *place, t_cub3d *cub3d, t_fp_map **b);
+void				ft_errorfp(char *m, char *p, t_cub3d *cub3d, t_fp_map **b);
 void				free_fp_map(t_fp_map **b);
 void				my_exit(t_cub3d *cub3d);
 

@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 19:53:30 by marina            #+#    #+#             */
-/*   Updated: 2020/12/03 16:51:19 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 20:20:41 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ int		key_press(int key_pressed, t_cub3d *cub3d)
 	if (key_pressed == KEY_ESC)
 		my_exit(cub3d);
 	if (key_pressed == KEY_LEFT)
-		cub3d->player.ang = simplifier(cub3d->player.ang + 1);
+		cub3d->player.ang = simplifier(cub3d->player.ang + 2);
 	if (key_pressed == KEY_RIGHT)
-		cub3d->player.ang = simplifier(cub3d->player.ang - 1);
+		cub3d->player.ang = simplifier(cub3d->player.ang - 2);
 	if (key_pressed == KEY_Z)
 		move_forward(cub3d);
 	if (key_pressed == KEY_S)
@@ -106,7 +106,7 @@ int		main(int argc, char **argv)
 
 	init_cub3d(&cub);
 	cub.save = arguments(argc, argv, &cub);
-	if ((fd = open(argv[1], 'r')) < 0)
+	if ((fd = open(argv[1], O_RDONLY)) < 0)
 		ft_error(OPEN_FAIL, argv[1], &cub);
 	cub.mlx = mlx_init();
 	file_processing(fd, &cub);
