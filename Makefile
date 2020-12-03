@@ -29,8 +29,8 @@ OBJS		=	${SRCS:.c=.o}
 CC			=	@clang
 RM			=	@rm -f
 FLAGS		=	-Wall -Werror -Wextra ${INCLUDES} -D BUFFER_SIZE=4096 \
-				-fsanitize=address
-LIBS		=	-Lminilibx-linux -lXext -lbsd -lmlx -lX11 -lm
+				-fsanitize=address -g
+LIBS		=	-Lminilibx-linux -lXext -lbsd -lmlx -lX11 -lm -g
 NAME		=	Cub3D
 
 .c.o :
@@ -57,7 +57,7 @@ clean :
 			${RM} ${OBJS}
 
 fclean :	clean
-			@echo "\033[0;34mEraseing the .a\033[0m"
+			@echo "\033[0;34mErasing the .a\033[0m"
 			@make fclean -s -C libftprintf -f Makefile
 			${RM} ${NAME}
 

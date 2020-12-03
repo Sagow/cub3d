@@ -6,20 +6,11 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 12:54:43 by marina            #+#    #+#             */
-/*   Updated: 2020/12/01 15:25:17 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:13:09 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
-
-void		my_free(void *pointer)
-{
-	if (pointer)
-	{
-		free(pointer);
-		pointer = NULL;
-	}
-}
 
 int			space(char *line, int i)
 {

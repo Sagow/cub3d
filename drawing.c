@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 16:34:43 by marina            #+#    #+#             */
-/*   Updated: 2020/12/03 16:52:26 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:13:36 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	draw_sprites(t_cub3d *cub3d, double ray, int i)
 	draw_or_not(rad, cub3d, i, ray);
 	bin = cub3d->sprite;
 	cub3d->sprite = cub3d->sprite->closer;
-	my_free(bin);
+	free(bin);
 	if (cub3d->sprite)
 		draw_sprites(cub3d, ray, i);
 }

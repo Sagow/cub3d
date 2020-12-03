@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 05:10:17 by marina            #+#    #+#             */
-/*   Updated: 2020/12/01 17:30:37 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:13:36 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void		fp_east(t_cub3d *cub3d, char *line, int i)
 		ft_error(DESC_PATH, "east texture", cub3d);
 	cub3d->east.draw = (t_pixel *)mlx_get_data_addr(cub3d->east.ptr, &trash,
 	&trash, &trash);
-	my_free(path);
+	free(path);
 }
 
 void		fp_north(t_cub3d *cub3d, char *line, int i)
@@ -65,7 +65,7 @@ void		fp_north(t_cub3d *cub3d, char *line, int i)
 		ft_error(DESC_PATH, "north texture", cub3d);
 	cub3d->north.draw = (t_pixel *)mlx_get_data_addr(cub3d->north.ptr, &trash,
 	&trash, &trash);
-	my_free(path);
+	free(path);
 }
 
 void		fp_south(t_cub3d *cub3d, char *line, int i)
@@ -93,7 +93,7 @@ void		fp_south(t_cub3d *cub3d, char *line, int i)
 		ft_error(DESC_PATH, "south texture", cub3d);
 	cub3d->south.draw = (t_pixel *)mlx_get_data_addr(cub3d->south.ptr, &trash,
 	&trash, &trash);
-	my_free(path);
+	free(path);
 }
 
 void		fp_west(t_cub3d *cub3d, char *line, int i)
@@ -121,7 +121,7 @@ void		fp_west(t_cub3d *cub3d, char *line, int i)
 		ft_error(DESC_PATH, "west texture", cub3d);
 	cub3d->west.draw = (t_pixel *)mlx_get_data_addr(cub3d->west.ptr, &trash,
 	&trash, &trash);
-	my_free(path);
+	free(path);
 }
 
 void		get_path(char *path, int *i, char *line, int max)

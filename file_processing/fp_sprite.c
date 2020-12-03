@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 06:05:41 by marina            #+#    #+#             */
-/*   Updated: 2020/12/01 15:24:36 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:13:36 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void		fp_sprite(t_cub3d *cub3d, char *line, int i)
 	&(cub3d->skin.width), &(cub3d->skin.height));
 	cub3d->skin.draw = (t_pixel *)mlx_get_data_addr(cub3d->skin.ptr, &trash,
 	&trash, &trash);
-	my_free(path);
+	free(path);
 }

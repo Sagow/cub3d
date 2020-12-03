@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 16:22:30 by marina            #+#    #+#             */
-/*   Updated: 2020/12/01 17:30:17 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:13:36 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int		gnl_to_chain(int fd, t_fp_map **begins, char *line, t_cub3d *cub3d)
 			ft_error(MALLOC_FAIL, "mapping", cub3d);
 		map->next->line = ft_strdup(line);
 		map = map->next;
-		my_free(line);
+		free(line);
 		size++;
 	}
 	map->next = NULL;

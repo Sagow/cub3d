@@ -1,15 +1,23 @@
-R 500 500
+
+
+
+
+
+S ./sprite/sprite1.xpm
+
 NO ./textures/north.xpm
+F 220    ,  100,0  
+R 500 5000
+
 SO ./textures/south.xpm
 WE ./textures/west.xpm
 EA ./textures/east.xpm
-S ./sprite/sprite1.xpm
-F 220    ,  100,0  
 C 225,30,0
+
 
       11111111
       10000001
-      10000W0111111
+      10020W0111111
       1000000000001
 1111111002000111101
 10000000000001  101
@@ -18,3 +26,5 @@ C 225,30,0
 10000000011111
 1000000001
 1111111111
+
+
