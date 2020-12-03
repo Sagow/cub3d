@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 19:53:30 by marina            #+#    #+#             */
-/*   Updated: 2020/12/03 14:47:43 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 16:51:19 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,29 +100,29 @@ char	arguments(int ac, char **av, t_cub3d *cub3d)
 
 int		main(int argc, char **argv)
 {
-	t_cub3d			cub3d;
+	t_cub3d			cub;
 	int				fd;
 	int				t;
 
-	init_cub3d(&cub3d);
-	cub3d.save = arguments(argc, argv, &cub3d);
+	init_cub3d(&cub);
+	cub.save = arguments(argc, argv, &cub);
 	if ((fd = open(argv[1], 'r')) < 0)
-		ft_error(OPEN_FAIL, argv[1], &cub3d);
-	cub3d.mlx = mlx_init();
-	file_processing(fd, &cub3d);
-	if (!cub3d.save)
-		cub3d.win = mlx_new_window(cub3d.mlx, cub3d.width, cub3d.height, "Cub3d");
-	cub3d.img = mlx_new_image(cub3d.mlx, cub3d.width, cub3d.height);
-	cub3d.draw = (t_pixel *)mlx_get_data_addr(cub3d.img, &t, &t, &t);
-	if (!(cub3d.distances = malloc(sizeof(double) * cub3d.width)))
+		ft_error(OPEN_FAIL, argv[1], &cub);
+	cub.mlx = mlx_init();
+	file_processing(fd, &cub);
+	if (!cub.save)
+		cub.win = mlx_new_window(cub.mlx, cub.width, cub.height, "Cub3d");
+	cub.img = mlx_new_image(cub.mlx, cub.width, cub.height);
+	cub.draw = (t_pixel *)mlx_get_data_addr(cub.img, &t, &t, &t);
+	if (!(cub.distances = malloc(sizeof(double) * cub.width)))
 		return (-1);
-	update(&cub3d);
-	if (!cub3d.save)
+	update(&cub);
+	if (!cub.save)
 	{
-		mlx_hook(cub3d.win, 2, (1L << 0), &key_press, &cub3d);
-		mlx_hook(cub3d.win, 33, 1L << 17, click, &cub3d);
-		mlx_put_image_to_window(cub3d.mlx, cub3d.win, cub3d.img, 0, 0);
+		mlx_hook(cub.win, 2, (1L << 0), &key_press, &cub);
+		mlx_hook(cub.win, 33, 1L << 17, click, &cub);
+		mlx_put_image_to_window(cub.mlx, cub.win, cub.img, 0, 0);
 	}
-	mlx_loop(cub3d.mlx);
+	mlx_loop(cub.mlx);
 	return (0);
 }
