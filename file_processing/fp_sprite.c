@@ -36,5 +36,7 @@ void		fp_sprite(t_cub3d *cub3d, char *line, int i)
 		ft_error(DESC_PATH, "sprite", cub3d);
 	cub3d->skin.draw = (t_pixel *)mlx_get_data_addr(cub3d->skin.ptr, &trash,
 	&trash, &trash);
+	if (!cub3d->skin.ptr)
+		ft_error(DESC_PATH, "sprite", cub3d);
 	free(path);
 }

@@ -32,7 +32,7 @@ t_pixel	skin_pixel(t_cub3d *cub3d, double ray, double y)
 
 void	draw_or_not(double rad, t_cub3d *cub3d, int i, double ray)
 {
-	int			j;
+	double		j;
 	double		h;
 
 	h = (cub3d->height / 2) - ((cub3d->width / 2 - cub3d->fov / 2) /
