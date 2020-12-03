@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 06:05:41 by marina            #+#    #+#             */
-/*   Updated: 2020/12/03 17:13:36 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 21:24:44 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void		fp_sprite(t_cub3d *cub3d, char *line, int i)
 		ft_error(DESC_WRONG_CHAR, "sprite", cub3d);
 	(cub3d->skin.ptr) = mlx_xpm_file_to_image(cub3d->mlx, path,
 	&(cub3d->skin.width), &(cub3d->skin.height));
+	if (!cub3d->skin.ptr)
+		ft_error(DESC_PATH, "sprite", cub3d);
 	cub3d->skin.draw = (t_pixel *)mlx_get_data_addr(cub3d->skin.ptr, &trash,
 	&trash, &trash);
 	free(path);

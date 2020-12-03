@@ -3,15 +3,15 @@
 
 
 
-S ./sprite/sprite1.xpm
+S ./sprite/cat.xpm
 
-NO ./textures/north.xpm
+NO ./textures/northerncat.xpm
 F 220    ,  100,0  
 R 500 5000
 
-SO ./textures/south.xpm
-WE ./textures/west.xpm
-EA ./textures/east.xpm
+SO ./textures/southerncat.xpm
+WE ./textures/westerncat.xpm
+EA ./textures/easterncat.xpm
 C 225,30,0
 
 

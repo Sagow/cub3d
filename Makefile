@@ -28,8 +28,8 @@ INCLUDES	=	-Iget_next_line						\
 OBJS		=	${SRCS:.c=.o}
 CC			=	@clang
 RM			=	@rm -f
-FLAGS		=	-Wall -Werror -Wextra ${INCLUDES} -D BUFFER_SIZE=4096
-LIBS		=	-Lminilibx-linux -lXext -lbsd -lmlx -lX11 -lm
+FLAGS		=	-Wall -Werror -Wextra ${INCLUDES} -D BUFFER_SIZE=4096 -fsanitize=address -g
+LIBS		=	-Lminilibx-linux -lXext -lbsd -lmlx -lX11 -lm -g
 NAME		=	Cub3D
 
 .c.o :
