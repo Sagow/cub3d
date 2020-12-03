@@ -31,7 +31,7 @@ RM			=	@rm -f
 FLAGS		=	-Wall -Werror -Wextra ${INCLUDES} -D BUFFER_SIZE=4096 \
 				-fsanitize=address
 LIBS		=	-Lminilibx-linux -lXext -lbsd -lmlx -lX11 -lm
-NAME		=	Cub3d
+NAME		=	Cub3D
 
 .c.o :
 			${CC} -c $< -o ${<:.c=.o} ${FLAGS}
