@@ -6,7 +6,7 @@
 /*   By: marina <marina@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 01:50:56 by marina            #+#    #+#             */
-/*   Updated: 2020/12/03 17:39:18 by marina           ###   ########.fr       */
+/*   Updated: 2020/12/03 19:44:35 by marina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,14 +85,6 @@ void	chain_to_map(t_cub3d *cub3d, t_fp_map **begins, int size)
 	}
 	cub3d->map[i] = NULL;
 }
-/*
-void	free_t_fp_map(t_fp_map *map)
-{
-	free(map->line);
-	if (map->next)
-		free_t_fp_map(map->next);
-	free(map);
-}*/
 
 void	fp_map(t_cub3d *cub3d, int fd, char *line)
 {
